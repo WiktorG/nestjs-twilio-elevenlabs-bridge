@@ -1,14 +1,20 @@
 {
-  "name": "konvly-ibroken-api",
+  "name": "nestjs-twilio-elevenlabs-bridge",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "description": "NestJS bridge connecting Twilio voice calls to ElevenLabs Conversational AI.",
+  "license": "MIT",
+  "keywords": [
+    "nestjs",
+    "twilio",
+    "elevenlabs",
+    "conversational-ai",
+    "voice",
+    "websocket"
+  ],
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
+    "start": "export WITH_NGROK=true && nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -21,10 +27,20 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.0",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/platform-socket.io": "^11.0.9",
+    "@nestjs/platform-ws": "^11.0.10",
+    "@nestjs/websockets": "^11.0.9",
+    "@ngrok/ngrok": "^1.4.1",
+    "@types/ws": "^8.5.14",
+    "elevenlabs": "^1.51.0",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "socket.io-client": "^4.8.1",
+    "twilio": "^5.4.5",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
