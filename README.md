@@ -1,5 +1,7 @@
 # NestJS Twilio Elevenlabs bridge API
 
+**Important note:** Packages may be outdated since I create this repo a long time ago and now I'm publishing it. Feel free to submit a PR!
+
 A [NestJS](https://nestjs.com) service that bridges [Twilio](https://twilio.com)
 inbound phone calls to [ElevenLabs Conversational AI](https://elevenlabs.io). It
 streams a caller's audio from Twilio to an ElevenLabs agent over a WebSocket and
